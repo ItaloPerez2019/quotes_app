@@ -22,8 +22,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '_z)@5b(p2ji+1fcgbu4!pqbxdfyrovx@!2+zz-uf0o%+33lu3)'
 
-# SECURITY WARNING: don't run with debug turned on in production!
+# # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+
+
+# SECRET_KEY = os.environ['SECRET_KEY']
+# DEBUG = os.environ.get('DEBUG', False)
+
 
 ALLOWED_HOSTS = []
 
@@ -37,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'quotes',
 ]
 
 MIDDLEWARE = [
@@ -54,7 +60,7 @@ ROOT_URLCONF = 'mysite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'mysite/templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
