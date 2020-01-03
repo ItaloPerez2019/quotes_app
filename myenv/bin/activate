@@ -82,3 +82,8 @@ pydoc () {
 if [ -n "${BASH-}" ] || [ -n "${ZSH_VERSION-}" ] ; then
     hash -r 2>/dev/null
 fi
+
+export SECRET_KEY = '_z)@5b(p2ji+1fcgbu4!pqbxdfyrovx@!2+zz-uf0o%+33lu3)'
+
+
+export DEBUG=True
