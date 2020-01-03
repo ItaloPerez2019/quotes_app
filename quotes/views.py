@@ -13,6 +13,7 @@ def quote_list(request):
 def quote_detail(request, pk):
     quote = get_object_or_404(Quote, pk=pk)
     return render(request, 'quotes/quote_detail.html', {'quote': quote})
+    
 
 
 def quote_new(request):
@@ -24,6 +25,7 @@ def quote_new(request):
         return redirect('quotes:quote_list')
 
     return render(request, 'quotes/quote_form.html', {'form': form})
+ 
 
 
 def quote_edit(request, pk):
@@ -37,6 +39,7 @@ def quote_edit(request, pk):
 
     return render(request, 'quotes/quote_form.html', {'quote': quote,
                                                       'form': form})
+    
 
 
 def quote_delete(request, pk):
@@ -48,3 +51,4 @@ def quote_delete(request, pk):
         return redirect('quotes:quote_list')
 
     return render(request, 'quotes/quote_confirm_delete.html', {'quote': quote})
+ 

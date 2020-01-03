@@ -31,7 +31,7 @@ DEBUG = True
 
 
 ALLOWED_HOSTS = []
-
+ 
 
 # Application definition
 
@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.humanize',
     'quotes',
 ]
 
@@ -127,7 +128,8 @@ STATIC_URL = '/static/'
 
 
 # create this line -/ 
+#create the path to static -/
 PROJECT_ROOT=os.path.dirname(os.path.abspath(__file__))
 STATIC_DIRS = (
-    os.path.join(PROJECT_ROOT, 'static')
+    os.path.join(PROJECT_ROOT, 'static'),
 )

@@ -14,3 +14,4 @@ class Quote(models.Model):
 
     class Meta:
         ordering = ['-added']
+  
